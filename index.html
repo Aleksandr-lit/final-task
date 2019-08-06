@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Test</title>
+	<script type="text/javascript">
+		var postion = ["Junior QA engineer", "Middle QA engineer", "Porduct owner", "Senior QA engineer", "Middle developer", "Project manager", "Senior developer", "Junior developer"];
+
+		var names = [];
+
+		function getNames() {
+			var nam;
+			var a = 0;
+			for (var i = 0; i < postion.length; i++) {
+			 	names[i] = prompt('Введите Имя');
+			}
+			 	return names;
+		}
+
+		getNames();
+
+		var team = new Object();
+
+		team.collaborator1 = new Object();
+		team.collaborator2 = new Object();
+		team.collaborator3 = new Object();
+		team.collaborator4 = new Object();
+		team.collaborator5 = new Object();
+		team.collaborator6 = new Object();
+		team.collaborator7 = new Object();
+		team.collaborator8 = new Object();
+
+		team.collaborator1.name = names[0];
+		team.collaborator1.position = postion[0];
+		team.collaborator2.name = names[1];
+		team.collaborator2.position = postion[1];
+		team.collaborator3.name = names[2];
+		team.collaborator3.position = postion[2];
+		team.collaborator4.name = names[3];
+		team.collaborator4.position = postion[3];
+		team.collaborator5.name = names[4];
+		team.collaborator5.position = postion[4];
+		team.collaborator6.name = names[5];
+		team.collaborator6.position = postion[5];
+		team.collaborator7.name = names[6];
+		team.collaborator7.position = postion[6];
+		team.collaborator8.name = names[7];
+		team.collaborator8.position = postion[7];
+		
+		Object.defineProperty(team.collaborator1, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator2, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator3, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator4, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator5, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator6, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator7, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+		Object.defineProperty(team.collaborator8, "salary", {value: "", configurable: true, writable: true, enumerable: true});
+
+		function setSalary(x){
+			for (element in x) {
+				if (name.indexOf('Junior')) {
+					var salary = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+					x.salary = salary;
+				}
+				else if (name.indexOf('Middle')) {
+					var salary = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
+					x.salary = salary;
+				}
+				else if (name.indexOf('Senior')) {
+					var salary = Math.floor(Math.random() * (3000 - 2500 + 1)) + 2500;
+					x.salary = salary;
+				}
+				else {
+					var salary = Math.floor(Math.random() * (4500 - 4000 + 1)) + 4000;
+					x.salary = salary;
+				}
+
+			}
+			return x;
+		}
+		setSalary(team.collaborator1);
+		setSalary(team.collaborator2);
+		setSalary(team.collaborator3);
+		setSalary(team.collaborator4);
+		setSalary(team.collaborator5);
+		setSalary(team.collaborator6);
+		setSalary(team.collaborator7);
+		setSalary(team.collaborator8);
+
+		// for(var key in team.collaborator1){
+		// 	tellAbourYourSelf();
+		// }
+		console.log(team);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
